@@ -3,11 +3,11 @@ import './Intro.scss'
 
 import WaterGrid from '../../components/WaterGrid/WaterGrid'
 import img from '../../assets/101060979.jpg'
-const Intro = ({welcomeDone}) => {
+const Intro = ({welcomeDone,aboutNotDone}) => {
  
   return (
     <div className='App'>
-      <h2 className={`intro--welcome ${welcomeDone ? 'inactive' : ''}`}>Hello</h2>
+      {aboutNotDone && <h2 className={`intro--welcome ${welcomeDone ? 'inactive' : ''}`}>Hello</h2>}
       <section className="intro">
         <div className="intro--main">
           <div className="img-info--wrapper">
