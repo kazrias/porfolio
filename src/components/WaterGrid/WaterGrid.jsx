@@ -15,6 +15,7 @@ const WaterGrid = ({ welcomeDone }) => {
 
 const Dot = ({ welcomeDone }) => {
   useEffect(() => {
+
     anime({
       targets: ".dot-point",
       scale: [
@@ -33,9 +34,35 @@ const Dot = ({ welcomeDone }) => {
       ],
       delay: anime.stagger(100, {
         grid: [GRID_WIDTH, GRID_WIDTH],
-        from: 'center'
+        from: 1
       }),
     })
+  }, [welcomeDone])
+  useEffect(() => {
+    setInterval(() => {
+      let randIndex = Math.floor(Math.random() * 900)
+      anime({
+        targets: ".dot-point",
+        scale: [
+          { value: 1.35, easing: "easeOutSine", duration: 250 },
+          { value: 1, easing: "easeInOutQuad", duratoin: 500 },
+        ],
+        translateY: [
+          { value: -25, easing: "easeOutSine", duration: 250 },
+          { value: 0, easing: "easeInOutQuad", duration: 500 },
+        ],
+        opacity: [
+
+          { value: 1, easing: "easeOutSine", duration: 250 },
+          { value: 1, easing: "easeInOutQuad", duration: 500 },
+
+        ],
+        delay: anime.stagger(100, {
+          grid: [GRID_WIDTH, GRID_WIDTH],
+          from: randIndex
+        }),
+      })
+    }, 6000)
   }, [welcomeDone])
   const handleDotClick = (e) => {
     anime({
