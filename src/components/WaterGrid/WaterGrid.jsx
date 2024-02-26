@@ -1,4 +1,3 @@
-
 import anime from "animejs"
 import { useEffect, useState } from "react";
 
