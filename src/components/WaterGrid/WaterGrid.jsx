@@ -14,20 +14,21 @@ const WaterGrid = ({ welcomeDone }) => {
 }
 
 const Dot = ({ welcomeDone }) => {
-  const [animationTrigger, setAnimationTrigger] = useState(0);
+
   const [intervalId, setIntervalId] = useState(null);
+  const [clicked, setClicked] = useState(false)
   useEffect(() => {
     const interval = setInterval(() => {
       // Increment animationTrigger to trigger useEffect on each change
-      setAnimationTrigger(prevTrigger => prevTrigger + 1);
+      setIntervalId(interval);
     }, 6000);
-    setIntervalId(interval)
+
     // Clear interval on component unmount
     return () => clearInterval(interval);
-  }, []); // Run effect only on component mount
+  }, [clicked]); // Run effect only on component mount
 
   useEffect(() => {
-    let randIndex=Math.floor(Math.random()*890)
+    let randIndex = Math.floor(Math.random() * 890)
     anime({
       targets: ".dot-point",
       scale: [
@@ -47,11 +48,12 @@ const Dot = ({ welcomeDone }) => {
         from: randIndex
       }),
     })
-  }, [animationTrigger]);
+  }, [intervalId]);
 
 
   const handleDotClick = (e) => {
     clearInterval(intervalId)
+    setClicked(prev => !prev)
     anime({
       targets: ".dot-point",
       scale: [
