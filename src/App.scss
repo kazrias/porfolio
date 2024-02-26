@@ -1,29 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-$--light-blue: #22D6BB;
+$--light-blue: #1d1d1d;
 
 body {
   background: linear-gradient(60deg,
-      #000000,
-      #222222,
-      #444444,
-      #666666);
+  #000000,
+  #222222,
+    );
   min-height: 100vh;
   color: white;
 }
 
-.hi {
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-style: normal;
-  color: $--light-blue;
-  letter-spacing: .6rem;
-  font-size: 16px;
+.App {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 15px;
 }
+
 
 //intro
 
@@ -34,15 +36,20 @@ body {
   flex-direction: column;
   height: 100vh;
   position: relative;
-  overflow: hidden;
 
   &--main {
-    margin-top: -250px;
+    margin-top: -130px;
   }
 
   &--welcome {
     user-select: none;
     -moz-user-select: none;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
     /* Firefox */
     -ms-user-select: none;
     /* Internet Explorer/Edge */
@@ -52,7 +59,6 @@ body {
     letter-spacing: 2rem;
     opacity: 0;
     animation: welcome 2.5s linear forwards;
-    height: 147px;
     text-shadow: 0 0 0px white;
   }
 
@@ -91,11 +97,16 @@ body {
   &--what,
   &--aim {
     opacity: 0;
+    position: relative;
+    z-index: 999;
   }
 
   &--who {
+    font-family: 'Times New Roman', sans-serif;
     font-size: 48px;
     color: $--light-blue;
+    text-shadow: 0px 0px 1px rgb(0, 255, 255);
+
   }
 
   &--who.animate {
@@ -160,4 +171,14 @@ body {
 .wrapper {
   margin-bottom: 30px;
   align-self: flex-end;
+}
+
+.empty {
+  width: 300px;
+}
+
+.waterGrid {
+  position: absolute;
+  right: -450px;
+
 }

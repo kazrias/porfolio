@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.scss'
 import { useEffect } from 'react'
+import WaterGrid from './components/WaterGrid/WaterGrid'
 import img from './assets/101060979.jpg'
 function App() {
 
@@ -10,8 +11,8 @@ function App() {
   })
   return (
     <div className='App'>
+      <h2 className={`intro--welcome ${welcomeDone ? 'inactive' : ''}`}>Hello</h2>
       <section className="intro">
-        <h2 className={`intro--welcome ${welcomeDone ? 'inactive' : ''}`}>Hello</h2>
 
         <div className="intro--main">
           <div className="img-info--wrapper">
@@ -24,7 +25,11 @@ function App() {
 
         </div>
         <p className={`intro--aim ${welcomeDone ? 'animate' : ''}`}>My aim is not just to write code, but to create interactive web applications that inspire and enhance user experience. I continuously explore new technologies and best practices to stay updated with the latest trends in web development and apply them in my work.</p>
+        {welcomeDone && <div className='waterGrid'>
+          <WaterGrid welcomeDone={welcomeDone} />
+        </div>}
       </section>
+      <div className="empty"></div>
     </div>
   )
 }
