@@ -1,6 +1,6 @@
 
 import anime from "animejs"
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const GRID_WIDTH = 30;
 // const GRID_HEIGHT = 25;
@@ -14,46 +14,30 @@ const WaterGrid = ({ welcomeDone }) => {
 }
 
 const Dot = ({ welcomeDone }) => {
-
-  const [intervalId, setIntervalId] = useState(null);
-  const [clicked, setClicked] = useState(false)
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Increment animationTrigger to trigger useEffect on each change
-      setIntervalId(interval);
-    }, 6000);
-
-    // Clear interval on component unmount
-    return () => clearInterval(interval);
-  }, [clicked]); // Run effect only on component mount
-
-  useEffect(() => {
-    let randIndex = Math.floor(Math.random() * 890)
     anime({
       targets: ".dot-point",
       scale: [
         { value: 1.35, easing: "easeOutSine", duration: 250 },
-        { value: 1, easing: "easeInOutQuad", duration: 500 },
+        { value: 1, easing: "easeInOutQuad", duratoin: 500 },
       ],
       translateY: [
         { value: -25, easing: "easeOutSine", duration: 250 },
         { value: 0, easing: "easeInOutQuad", duration: 500 },
       ],
       opacity: [
+
         { value: 1, easing: "easeOutSine", duration: 250 },
         { value: 1, easing: "easeInOutQuad", duration: 500 },
+
       ],
       delay: anime.stagger(100, {
         grid: [GRID_WIDTH, GRID_WIDTH],
-        from: randIndex
+        from: 'center'
       }),
     })
-  }, [intervalId]);
-
-
+  }, [welcomeDone])
   const handleDotClick = (e) => {
-    clearInterval(intervalId)
-    setClicked(prev => !prev)
     anime({
       targets: ".dot-point",
       scale: [
