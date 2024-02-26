@@ -6,6 +6,7 @@
   height: 100vh;
   z-index: 100;
   opacity: 0;
+
   &.animate {
     animation: welcome 2.5s linear forwards;
   }
@@ -21,13 +22,37 @@
 
   &-menu__item {
     writing-mode: vertical-rl;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     // background-color: red;
-    padding: 30px;
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 110px;
+    text-shadow: 2px 2px 10px white;
+  }
+
+  &-menu__line {
+    height: 110px;
+    width: 1px;
+    position: absolute;
+    background-color: rgb(0, 255, 255);
+    right: 0;
+    transition: all .4s ease-in-out;
+  }
+
+  &-menu__line.about {
+    top: 0;
+  }
+
+  &-menu__line.projects {
+    top: 210px;
+  }
+
+  &-menu__line.contact {
+    top: 420px;
   }
 }
 

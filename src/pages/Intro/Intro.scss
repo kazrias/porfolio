@@ -159,5 +159,6 @@ $--light-blue: #1d1d1d;
 .waterGrid {
   position: absolute;
   right: -450px;
-  top: 165px;
+  top: 50%;
+  transform: translateY(-50%);
 }
