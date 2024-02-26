@@ -4,6 +4,11 @@
   width: 100px;
   background-color: black;
   height: 100vh;
+  z-index: 100;
+  opacity: 0;
+  &.animate {
+    animation: welcome 2.5s linear forwards;
+  }
 
   &-menu {
     display: flex;
@@ -17,5 +22,17 @@
   &-menu__item {
     writing-mode: vertical-rl;
     font-size: 18px;
+    cursor: pointer;
+    // background-color: red;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@keyframes welcome {
+  100% {
+    opacity: 1;
   }
 }

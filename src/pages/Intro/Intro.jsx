@@ -1,13 +1,10 @@
 
 import './Intro.scss'
-import { useEffect, useState } from 'react'
+
 import WaterGrid from '../../components/WaterGrid/WaterGrid'
 import img from '../../assets/101060979.jpg'
-const Intro = () => {
-  const [welcomeDone, setWelcomeDone] = useState(false)
-  useEffect(() => {
-    setTimeout(() => setWelcomeDone(true), 2000)
-  })
+const Intro = ({welcomeDone}) => {
+ 
   return (
     <div className='App'>
       <h2 className={`intro--welcome ${welcomeDone ? 'inactive' : ''}`}>Hello</h2>
