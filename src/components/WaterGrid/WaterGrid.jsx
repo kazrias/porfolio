@@ -1,6 +1,6 @@
 
 import anime from "animejs"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const GRID_WIDTH = 30;
 // const GRID_HEIGHT = 25;
@@ -14,57 +14,44 @@ const WaterGrid = ({ welcomeDone }) => {
 }
 
 const Dot = ({ welcomeDone }) => {
+  const [animationTrigger, setAnimationTrigger] = useState(0);
+  const [intervalId, setIntervalId] = useState(null);
   useEffect(() => {
+    const interval = setInterval(() => {
+      // Increment animationTrigger to trigger useEffect on each change
+      setAnimationTrigger(prevTrigger => prevTrigger + 1);
+    }, 6000);
+    setIntervalId(interval)
+    // Clear interval on component unmount
+    return () => clearInterval(interval);
+  }, []); // Run effect only on component mount
 
+  useEffect(() => {
+    let randIndex=Math.floor(Math.random()*890)
     anime({
       targets: ".dot-point",
       scale: [
         { value: 1.35, easing: "easeOutSine", duration: 250 },
-        { value: 1, easing: "easeInOutQuad", duratoin: 500 },
+        { value: 1, easing: "easeInOutQuad", duration: 500 },
       ],
       translateY: [
         { value: -25, easing: "easeOutSine", duration: 250 },
         { value: 0, easing: "easeInOutQuad", duration: 500 },
       ],
       opacity: [
-
         { value: 1, easing: "easeOutSine", duration: 250 },
         { value: 1, easing: "easeInOutQuad", duration: 500 },
-
       ],
       delay: anime.stagger(100, {
         grid: [GRID_WIDTH, GRID_WIDTH],
-        from: 1
+        from: randIndex
       }),
     })
-  }, [welcomeDone])
-  useEffect(() => {
-    setInterval(() => {
-      let randIndex = Math.floor(Math.random() * 900)
-      anime({
-        targets: ".dot-point",
-        scale: [
-          { value: 1.35, easing: "easeOutSine", duration: 250 },
-          { value: 1, easing: "easeInOutQuad", duratoin: 500 },
-        ],
-        translateY: [
-          { value: -25, easing: "easeOutSine", duration: 250 },
-          { value: 0, easing: "easeInOutQuad", duration: 500 },
-        ],
-        opacity: [
+  }, [animationTrigger]);
 
-          { value: 1, easing: "easeOutSine", duration: 250 },
-          { value: 1, easing: "easeInOutQuad", duration: 500 },
 
-        ],
-        delay: anime.stagger(100, {
-          grid: [GRID_WIDTH, GRID_WIDTH],
-          from: randIndex
-        }),
-      })
-    }, 6000)
-  }, [welcomeDone])
   const handleDotClick = (e) => {
+    clearInterval(intervalId)
     anime({
       targets: ".dot-point",
       scale: [
