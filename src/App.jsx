@@ -13,7 +13,6 @@ function App() {
     <div className='App'>
       <h2 className={`intro--welcome ${welcomeDone ? 'inactive' : ''}`}>Hello</h2>
       <section className="intro">
-
         <div className="intro--main">
           <div className="img-info--wrapper">
             <div className={`intro--img ${welcomeDone ? 'animate' : ''}`}><img src={img} alt="" /></div>

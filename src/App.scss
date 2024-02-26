@@ -23,7 +23,7 @@ body {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  padding: 0 15px;
+  padding: 0 15px 0 0px;
 }
 
 
@@ -105,7 +105,7 @@ body {
     font-family: 'Times New Roman', sans-serif;
     font-size: 48px;
     color: $--light-blue;
-    text-shadow: 0px 0px 1px rgb(0, 255, 255);
+    text-shadow: 0px 0px 2px rgb(0, 255, 255);
 
   }
 
@@ -180,5 +180,5 @@ body {
 .waterGrid {
   position: absolute;
   right: -450px;
-
+  top: 165px;
 }
