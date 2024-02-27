@@ -4,7 +4,6 @@ import './Intro.scss'
 import WaterGrid from '../../components/WaterGrid/WaterGrid'
 import img from '../../assets/101060979.jpg'
 const Intro = ({welcomeDone,aboutNotDone}) => {
- 
   return (
     <div className='App'>
       {aboutNotDone && <h2 className={`intro--welcome ${welcomeDone ? 'inactive' : ''}`}>Hello</h2>}
