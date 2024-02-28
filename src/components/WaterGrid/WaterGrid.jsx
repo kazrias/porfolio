@@ -91,7 +91,7 @@ const Dot = () => {
             key={`${i}-${j}`}
           >
             <div
-              className="dot-point h-1.5 w-1.5 rounded-full bg-gradient-to-b from-gray-500 to-gray-800 opacity-50 group-hover:from-white group-hover:to-black"
+              className="dot-point h-1.5 w-1.5 rounded-full bg-gradient-to-b from-slate-500 to-gray-800 opacity-50 group-hover:from-white group-hover:to-black"
               data-index={index}
             ></div>
           </div>

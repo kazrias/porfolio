@@ -18,16 +18,21 @@ const skills2 = ['Javascript', 'React', 'Redux', 'Webpack', 'Vite', 'SASS', 'Tai
 const skills = [js, react, redux, webpack, vite, sass, tailwind, gulp, firebase, git, router, figma, photoshop]
 export const Skills = () => {
   return (
-    <div className="logos">
-      <div className="logos-slide">
-        {skills.map(skill => <div key={skill}><img src={skill} alt="" /></div>)}
+    <div className="logos-wrapper">
+      <div className='skill-title'>
+        Skills
       </div>
-      <div className="logos-slide">
-        {skills.map(skill => <div key={skill}><img src={skill} alt="" /></div>)}
-      </div>
-      <div className="highlight-wrapper">
-        <div className="logos-slide__highlight">
+      <div className="logos">
+        <div className="logos-slide">
           {skills.map(skill => <div key={skill}><img src={skill} alt="" /></div>)}
+        </div>
+        <div className="logos-slide">
+          {skills.map(skill => <div key={skill}><img src={skill} alt="" /></div>)}
+        </div>
+        <div className="highlight-wrapper">
+          <div className="logos-slide__highlight">
+            {skills.map(skill => <div key={skill}><img src={skill} alt="" /></div>)}
+          </div>
         </div>
       </div>
     </div>
