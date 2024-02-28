@@ -1,0 +1,29 @@
+.skills-section {
+  overflow: hidden;
+  align-self: start;
+  width: 560px;
+  border: 1px solid red;
+  margin-left: 30px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: slide 5s infinite linear;
+  gap: 30px;
+}
+
+.skills-logo {
+
+  white-space: nowrap;
+}
+
+@keyframes slide {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: -100%;
+  }
+}
