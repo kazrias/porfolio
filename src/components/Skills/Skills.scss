@@ -69,10 +69,9 @@
 //   }
 // }
 .logos {
-  margin-left: 30px;
   width: 560px;
   display: flex;
-  margin-right: 30px;
+  margin: 0 30px;
   overflow: hidden;
   align-self: flex-start;
   position: relative;
@@ -80,12 +79,11 @@
 
 .logos-slide {
   display: flex;
-  // gap: 30px;
-  // padding-right: 30px;
+
   animation: slide 15s infinite linear;
 }
 .logos-slide div{
-  filter: grayscale(.8);
+  filter: grayscale(1);
 }
 .logos-slide div,
 .logos-slide__highlight div {
