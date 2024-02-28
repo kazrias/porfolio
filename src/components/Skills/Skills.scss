@@ -1,29 +1,135 @@
-.skills-section {
-  overflow: hidden;
-  align-self: start;
-  width: 560px;
-  border: 1px solid red;
+// .skills-section {
+//   opacity: 0;
+//   overflow: hidden;
+//   align-self: start;
+//   white-space: nowrap;
+//   margin-left: 30px;
+//   width: 560px;
+//   animation: opac 3.5s forwards;
+//   position: relative;
+//   z-index: 999999;
+// }
+
+// .skills {
+
+//   display: inline-block;
+//   animation: slide 5s infinite linear;
+
+// }
+
+// .skills-logo {
+//   display: inline-block;
+//   white-space: nowrap;
+//   padding: 0 30px;
+//   height: 50px;
+
+// }
+
+
+
+
+// //highlight
+// .highlighted-wrapper {
+//   top: 0;
+//   left: 0;
+//   position: absolute;
+//   width: 70px;
+//   border: 1px solid wheat;
+//   overflow: hidden;
+// }
+
+// .highlighted-skills {
+
+//   display: inline-block;
+
+//   color: red;
+//   white-space: nowrap;
+//   animation: slide 15s infinite linear;
+// }
+
+// .highlighted-skills__logo {
+//   display: inline-block;
+//   white-space: nowrap;
+//   padding: 0 30px;
+// }
+
+// @keyframes slide {
+//   from {
+//     transform: translateX(0);
+//   }
+
+//   to {
+//     transform: translateX(-100%);
+//   }
+// }
+
+// @keyframes opac {
+//   100% {
+//     opacity: 1;
+//   }
+// }
+.logos {
   margin-left: 30px;
+  width: 560px;
+  display: flex;
+  margin-right: 30px;
+  overflow: hidden;
+  align-self: flex-start;
+  position: relative;
 }
 
-.skills {
+.logos-slide {
+  display: flex;
+  // gap: 30px;
+  // padding-right: 30px;
+  animation: slide 15s infinite linear;
+}
+.logos-slide div{
+  filter: grayscale(.8);
+}
+.logos-slide div,
+.logos-slide__highlight div {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logos-slide div:nth-child(1),
+.logos-slide__highlight div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.logos-slide div img {
+  display: block;
+  min-width: 60px;
+}
+.logos-slide__highlight div img{
+  display: block;
+  min-width: 60px;
+}
+@keyframes slide {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.highlight-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 62px;
   display: flex;
   flex-wrap: nowrap;
-  animation: slide 5s infinite linear;
-  gap: 30px;
+  overflow: hidden;
+  border: 1px solid red;
 }
-
-.skills-logo {
-
-  white-space: nowrap;
-}
-
-@keyframes slide {
-  from {
-    translate: 0;
-  }
-
-  to {
-    translate: -100%;
-  }
+.logos-slide__highlight {
+  // padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slide 15s infinite linear;
 }

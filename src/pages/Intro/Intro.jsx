@@ -20,7 +20,7 @@ const Intro = ({ welcomeDone, aboutNotDone }) => {
           </div>
         </div>
         <p className={`intro--aim ${welcomeDone ? 'animate' : ''}`}>My aim is not just to write code, but to create interactive web applications that inspire and enhance user experience. I continuously explore new technologies and best practices to stay updated with the latest trends in web development and apply them in my work.</p>
-        <Skills />
+        {welcomeDone && <Skills />}
         {welcomeDone && <div className='waterGrid'>
           <WaterGrid />
         </div>}

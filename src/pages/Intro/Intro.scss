@@ -17,7 +17,7 @@ $--light-blue: #1d1d1d;
   position: relative;
 
   &--main {
-    margin-top: -130px;
+    margin-top: -60px;
   }
 
   &--welcome {
@@ -113,7 +113,7 @@ $--light-blue: #1d1d1d;
     // margin-left: -36px;
     max-width: 800px;
     // font-family: sans-serif;
-    margin-top: 30px;
+    margin: 30px 0;
     font-size: 20px;
 
     letter-spacing: 2px;
@@ -123,6 +123,7 @@ $--light-blue: #1d1d1d;
     font-family: "Kode Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
+    // margin-bottom: 30px;
   }
 
 
