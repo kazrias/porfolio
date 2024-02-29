@@ -7,7 +7,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+#root{
+  height: 100vh;
+}
 
 
 body {
@@ -15,7 +17,7 @@ body {
       #000000,
       #222222,
     );
-  min-height: 100vh;
+  height: 100vh;
   color: white;
-  
+  background-attachment: fixed;
 }

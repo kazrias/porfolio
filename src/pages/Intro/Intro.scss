@@ -3,6 +3,7 @@
   justify-content: center;
   overflow: hidden;
   padding: 0 15px 0 0px;
+  height: 100%;
 }
 
 $--light-blue: #1d1d1d;
@@ -13,7 +14,7 @@ $--light-blue: #1d1d1d;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   position: relative;
 
   &--main {
