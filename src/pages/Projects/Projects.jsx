@@ -23,7 +23,7 @@ const projects = [
 const Projects = () => {
   const ref = useRef()
   const { scrollYProgress } = useScroll({ target: ref })
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-67%"])
+  const x = useTransform(scrollYProgress, [0, 1], ["10%", "-67%"])
   return (
     <motion.div
       className='h-full'
@@ -38,7 +38,7 @@ const Projects = () => {
             <div className='h-screen w-screen flex justify-center items-center'>Keep scrolling</div>
             {projects.map(({ id, title, img, link, descr }) => (
               <div className='h-screen w-screen flex justify-center items-center ' key={id}>
-                <div className='flex flex-col gap-8 text-white'>
+                <div className='max-w-4xl flex flex-col gap-8 text-white'>
                   <h2>{title}</h2>
                   <div className='relative'>
                     <img className='project-img' src={img} alt="" />
