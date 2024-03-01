@@ -35,7 +35,7 @@ const Projects = () => {
         <div className='h-[100vh] flex items-center justify-center text-8xl text-center'>My Projects</div>
         <div className='sticky top-0 flex h-screen gap-4 items-center overflow-hidden'>
           <motion.div style={{ x }} className='flex'>
-            <div className='h-screen w-screen flex justify-center items-center'>Keep scrolling</div>
+            <div className='keep-scrolling h-screen w-screen flex justify-center items-center'>Keep scrolling</div>
             {projects.map(({ id, title, img, link, descr }) => (
               <div className='h-screen w-screen flex justify-center items-center ' key={id}>
                 <div className='max-w-4xl flex flex-col gap-8 text-white'>

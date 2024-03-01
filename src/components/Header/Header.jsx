@@ -2,7 +2,7 @@ import './Header.scss'
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
-export const Header = ({ welcomeDone, setAboutNotDone }) => {
+export const Header = ({ welcomeDone }) => {
   const [line, setLine] = useState("about")
   let location = useLocation()
   useEffect(() => {

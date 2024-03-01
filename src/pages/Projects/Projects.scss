@@ -1,6 +1,6 @@
 .projects-s {
   height: 100vh;
- 
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,6 +8,20 @@
   opacity: 0;
 }
 
+.keep-scrolling {
+  opacity: 0;
+  animation: keepScrolling 4.1s forwards;
+}
+
+@keyframes keepScrolling {
+  90% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes opac {
   100% {
