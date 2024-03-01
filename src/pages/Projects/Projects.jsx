@@ -23,7 +23,7 @@ const projects = [
 const Projects = () => {
   const ref = useRef()
   const { scrollYProgress } = useScroll({ target: ref })
-  const x = useTransform(scrollYProgress, [0, 1], ["-20%", "-67%"])
+  const x = useTransform(scrollYProgress, [0, 1], ["-10%", "-67%"])
   return (
     <motion.div
       className='h-full bg-gradient-to-b from-black to-neutral-900'
@@ -31,7 +31,7 @@ const Projects = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className='h-[600vh] relative' ref={ref}>
+      <div className='h-[400vh] relative' ref={ref}>
         <div className='h-[100vh] flex items-center justify-center text-8xl text-center'>My Projects</div>
         <div className='sticky top-0 flex h-screen gap-4 items-center overflow-hidden'>
           <motion.div style={{ x }} className='flex'>
