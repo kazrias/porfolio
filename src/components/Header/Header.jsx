@@ -1,6 +1,6 @@
 import './Header.scss'
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export const Header = ({ welcomeDone, setAboutNotDone }) => {
   const [line, setLine] = useState("about")
@@ -17,11 +17,11 @@ export const Header = ({ welcomeDone, setAboutNotDone }) => {
   return (
     <div className={`header ${welcomeDone ? 'animate' : ''}`}>
       <div className="header-menu">
-        <div onClick={() => onClickSection('about')} className="header-menu__item"><Link to="/">About</Link>
+        <div className="header-menu__item"><NavLink className={({ isActive }) => { isActive && setLine('about') }} to="/">About</NavLink>
           <div className={`header-menu__line ${line}`}></div>
         </div>
-        <div onClick={() => onClickSection('projects')} className="header-menu__item"><Link to="/projects">Projects</Link></div>
-        <div onClick={() => onClickSection('contact')} className="header-menu__item"><Link to="/contact">Contact</Link></div>
+        <div  className="header-menu__item"><NavLink className={({ isActive }) => { isActive && setLine('projects') }} to="/projects">Projects</NavLink></div>
+        <div  className="header-menu__item"><NavLink className={({ isActive }) => { isActive && setLine('contact') }} to="/contact">Contact</NavLink></div>
       </div>
     </div>
   )
