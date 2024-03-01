@@ -2,7 +2,7 @@ import './Header.scss'
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
-export const Header = ({ welcomeDone }) => {
+export const Header = ({ welcomeDone, setAboutNotDone }) => {
   const [line, setLine] = useState("about")
   let location = useLocation()
   useEffect(() => {
@@ -11,9 +11,13 @@ export const Header = ({ welcomeDone }) => {
         setLine('about')
         break
       case "/projects":
+        console.log('done');
+        setAboutNotDone(false)
         setLine("projects")
         break
       case "/contact":
+        console.log('done');
+        setAboutNotDone(false)
         setLine("contact")
         break
     }

@@ -23,11 +23,11 @@ const projects = [
 const Projects = () => {
   const ref = useRef()
   const { scrollYProgress } = useScroll({ target: ref })
-  const x = useTransform(scrollYProgress, [0, 1], ["10%", "-67%"])
+  const x = useTransform(scrollYProgress, [0, 1], ["-20%", "-67%"])
   return (
     <motion.div
-      className='h-full'
-      initial={{ y: "-200vh" }}
+      className='h-full bg-gradient-to-b from-black to-neutral-900'
+      initial={{ y: "100vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
@@ -35,9 +35,9 @@ const Projects = () => {
         <div className='h-[100vh] flex items-center justify-center text-8xl text-center'>My Projects</div>
         <div className='sticky top-0 flex h-screen gap-4 items-center overflow-hidden'>
           <motion.div style={{ x }} className='flex'>
-            <div className='keep-scrolling h-screen w-screen flex justify-center items-center'>Keep scrolling</div>
+            <div className='h-screen w-screen flex justify-center items-center bg-gradient-to-b from-neutral-900 to-black'></div>
             {projects.map(({ id, title, img, link, descr }) => (
-              <div className='h-screen w-screen flex justify-center items-center ' key={id}>
+              <div className='h-screen w-screen flex justify-center items-center bg-gradient-to-b from-neutral-900 to-black ' key={id}>
                 <div className='max-w-4xl flex flex-col gap-8 text-white'>
                   <h2>{title}</h2>
                   <div className='relative'>

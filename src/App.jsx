@@ -16,14 +16,14 @@ function App() {
     setTimeout(() => setWelcomeDone(true), 2000)
   })
   return (
-    <>
+    <div className='h-full bg-gradient-to-b from-black to-black'>
       <Header welcomeDone={welcomeDone} setAboutNotDone={setAboutNotDone} />
       <Routes>
         <Route path="/" element={<Intro welcomeDone={welcomeDone} aboutNotDone={aboutNotDone} />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </>
+    </div>
   )
 }
 

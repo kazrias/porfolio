@@ -6,12 +6,14 @@
   justify-content: center;
   animation: opac 1s forwards;
   opacity: 0;
+
 }
 
 .keep-scrolling {
   opacity: 0;
   animation: keepScrolling 4.1s forwards;
 }
+
 
 @keyframes keepScrolling {
   90% {
@@ -27,4 +29,11 @@
   100% {
     opacity: 1;
   }
+}
+
+.gradient-own {
+  background: linear-gradient(180deg,
+      #000000,
+      #222222,
+    );
 }
