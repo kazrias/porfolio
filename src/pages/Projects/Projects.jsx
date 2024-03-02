@@ -16,7 +16,7 @@ const projects = [
     title: 'Galactus-Store',
     img: galactus,
     link: "https://galactus-store.vercel.app/",
-    descr: "Embark on a galactic journey through our vast array of products, where every purchase feels like a cosmic conquest. From stellar fashion to interstellar gadgets, our store orbits around your every need. Explore the infinite expanse of our collection, curated with cosmic care to bring you the latest in cosmic trends and innovations. "
+    descr: "Embark on a galactic journey through our vast array of products, where every purchase feels like a cosmic conquest. From stellar fashion to interstellar gadgets, our store orbits around your every need. Explore the infinite expanse of our collection, curated with cosmic care to bring you the latest in cosmic trends and innovations. At Galactus-Store, the universe is your shopping aisle, and every purchase propels you further into the cosmic adventure of style and innovation. "
   }
 ]
 
