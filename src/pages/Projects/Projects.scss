@@ -9,9 +9,13 @@
 
 }
 
+.my-projects {
+  font-family: "Kode Mono", monospace;
+}
+
 .keep-scrolling {
   opacity: 0;
-  animation: keepScrolling 4.1s forwards;
+  animation: keepScrolling 2.5s forwards;
 }
 
 
@@ -36,4 +40,338 @@
       #000000,
       #222222,
     );
+}
+
+.project-title {
+  font-family: "Kode Mono", monospace;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  text-shadow: 2px 0px 1px rgb(0, 238, 255), -2px 0px 1px rgb(255, 0, 0);
+}
+
+.glass-effect {
+  /* From https://css.glass */
+  background: #000;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+
+// button
+.ui-btn {
+  --btn-default-bg: rgb(0, 0, 0);
+  --btn-padding: 15px 20px;
+  --btn-hover-bg: rgb(0, 0, 0);
+  --btn-transition: .3s;
+  --btn-letter-spacing: .1rem;
+  --btn-animation-duration: 4.2s;
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: #ffffff;
+  --default-btn-color: #fff;
+  --font-size: 16px;
+  /* 👆 this field should not be empty */
+  --font-weight: 600;
+  --font-family: Menlo, Roboto Mono, monospace;
+  // border-radius: 6px;
+  /* 👆 this field should not be empty */
+  text-shadow: 1px 0px 0px rgb(0, 238, 255), -1px 0px 0px rgb(255, 0, 0);
+
+}
+
+/* button settings 👆 */
+
+.ui-btn {
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  border: none;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+  margin-left: auto;
+  // border: 1px solid rgba(255, 255, 255, 0.188);
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: black;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn:hover,
+.ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.ui-btn:hover span,
+.ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn span::before,
+.ui-btn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration) infinite;
+}
+
+// @keyframes chitchat {
+//   0% {
+//     content: "#";
+//   }
+
+//   5% {
+//     content: ".";
+//   }
+
+//   10% {
+//     content: "^{";
+//   }
+
+//   15% {
+//     content: "-!";
+//   }
+
+//   20% {
+//     content: "#$_";
+//   }
+
+//   25% {
+//     content: "№:0";
+//   }
+
+//   30% {
+//     content: "#\{+.";
+//   }
+
+//   35% {
+//     content: '@}-?';
+//   }
+
+//   40% {
+//     content: '?{4@%';
+//   }
+
+//   45% {
+//     content: '=.,^!';
+//   }
+
+//   50% {
+//     content: "?2@%";
+//   }
+
+//   55% {
+//     content: "\;1}]";
+//   }
+
+//   60% {
+//     content: "?{%:%";
+//     right: 0;
+//   }
+
+//   65% {
+//     content: "|{f[4";
+//     right: 0;
+//   }
+
+//   70% {
+//     content: "{4%0%";
+//     right: 0;
+//   }
+
+//   75% {
+//     content: "'1_0<";
+//     right: 0;
+//   }
+
+//   80% {
+//     content: "{0%";
+//     right: 0;
+//   }
+
+//   85% {
+//     content: "]>'";
+//     right: 0;
+//   }
+
+//   90% {
+//     content: "4";
+//     right: 0;
+//   }
+
+//   95% {
+//     content: "2";
+//     right: 0;
+//   }
+
+//   100% {
+//     content: "";
+//     right: 0;
+//     animation-delay:2s ;
+//   }
+// }
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  2% {
+    content: ".";
+  }
+
+  4% {
+    content: "^{";
+  }
+
+  6% {
+    content: "-!";
+  }
+
+  8% {
+    content: "#$_";
+  }
+
+  10% {
+    content: "№:0";
+  }
+
+  12% {
+    content: "#\{+.";
+  }
+
+  14% {
+    content: '@}-?';
+  }
+
+  16% {
+    content: '?{4@%';
+  }
+
+  18% {
+    content: '=.,^!';
+  }
+
+  20% {
+    content: "?2@%";
+  }
+
+  22% {
+    content: "\;1}]";
+  }
+
+  24% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  26% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  28% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  30% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  32% {
+    content: "{0%";
+    right: 0;
+  }
+
+  34% {
+    content: "]>'";
+    right: 0;
+  }
+
+  36% {
+    content: "4";
+    right: 0;
+  }
+
+  38% {
+    content: "2";
+    right: 0;
+  }
+
+  40% {
+    content: "";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+
+.mouse {
+  width: 50px;
+  height: 90px;
+  border: 3px solid #333;
+  border-radius: 60px;
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 2s infinite;
+    -webkit-animation: wheel 2s infinite;
+  }
+
+  &::after {
+    content: 'Scroll down';
+    width: 70px;
+
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20px;
+    color: rgba(255, 255, 255, 0.681);
+    font-size: 13px;
+    font-family: serif;
+  }
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
 }

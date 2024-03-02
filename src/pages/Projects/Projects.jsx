@@ -9,14 +9,14 @@ const projects = [
     title: 'AMMA-Track',
     img: ammaTrack,
     link: "https://amma-track.vercel.app/",
-    descr: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus unde perspiciatis odio quidem consequuntur commodi error quas quia velit nesciunt."
+    descr: "AMMA-Track is an intuitive project management platform designed to empower individuals to accomplish tasks efficiently and effectively.With its user-friendly interface and robust features, AMMA-Track enables users to organize projects, track progress seamlessly from any location. Whether you're working in a bustling office environment or from the tranquility of your home office, AMMA-Track adapts to your unique workflow, helping you stay on top of deadlines and reach new levels of productivity"
   },
   {
     id: 2,
     title: 'Galactus-Store',
     img: galactus,
     link: "https://galactus-store.vercel.app/",
-    descr: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus unde perspiciatis odio quidem consequuntur commodi error quas quia velit nesciunt."
+    descr: "Embark on a galactic journey through our vast array of products, where every purchase feels like a cosmic conquest. From stellar fashion to interstellar gadgets, our store orbits around your every need. Explore the infinite expanse of our collection, curated with cosmic care to bring you the latest in cosmic trends and innovations. "
   }
 ]
 
@@ -31,19 +31,27 @@ const Projects = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className='h-[400vh] relative' ref={ref}>
-        <div className='h-[100vh] flex items-center justify-center text-8xl text-center'>My Projects</div>
+      <div className='h-[360vh] relative' ref={ref}>
+        <div className='h-[100vh] flex items-center relative justify-center text-8xl text-center my-projects'><div className='relative'>My Projects
+          <div className="mouse"></div></div> </div>
+
         <div className='sticky top-0 flex h-screen gap-4 items-center overflow-hidden'>
           <motion.div style={{ x }} className='flex'>
             <div className='h-screen w-screen flex justify-center items-center bg-gradient-to-b from-neutral-900 to-black'></div>
             {projects.map(({ id, title, img, link, descr }) => (
-              <div className='h-screen w-screen flex justify-center items-center bg-gradient-to-b from-neutral-900 to-black ' key={id}>
-                <div className='max-w-4xl flex flex-col gap-8 text-white'>
-                  <h2>{title}</h2>
+              <div className='h-screen w-screen flex justify-center flex-col items-center bg-gradient-to-b from-neutral-900 to-black ' key={id}>
+                <h2 className='project-title mb-5'>{title}</h2>
+                <div className='max-w-4xl flex flex-col gap-8 text-white overflow-hidden border border-white  glass-effect'>
                   <div className='relative'>
                     <img className='project-img' src={img} alt="" />
-                    <p >{descr}</p>
-                    <a target='_blank' href={link}>Check it</a>
+                    <p className=' p-3'>{descr}
+                      <a target='_blank' className=' block' href={link}>
+                        <button className="ui-btn mt-2">
+                          <span>
+                            Check it
+                          </span>
+                        </button></a></p>
+
                   </div>
                 </div>
               </div >))}
