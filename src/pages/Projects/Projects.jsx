@@ -29,7 +29,7 @@ const Projects = () => {
       className='h-full bg-gradient-to-b from-black to-neutral-900'
       initial={{ y: "100vh" }}
       animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.8 }}
     >
       <div className='h-[360vh] relative' ref={ref}>
         <div className='h-[100vh] flex items-center relative justify-center text-8xl text-center my-projects'><div className='relative'>My Projects
