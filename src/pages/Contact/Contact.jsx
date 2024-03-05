@@ -8,7 +8,7 @@ import facebook from '../../images/facebook.png'
 const Contact = () => {
 
   return (
-    <div className='h-full relative overflow-hidden flex justify-center items-center ml-[96px]'>
+    <div className='h-full relative overflow-hidden flex justify-center items-center ml-[99px]'>
       <motion.div
         initial={{ y: "-100vh", x: "-50vw" }}
         animate={{ y: "0%", x: "0%" }}
