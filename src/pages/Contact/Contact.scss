@@ -4,3 +4,95 @@
   align-items: center;
   justify-content: center;
 }
+
+.clip {
+  &--one {
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+  }
+
+  &--two {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+  }
+}
+
+.contact-form {
+  background: #000;
+  border: 1px solid white;
+  padding: 60px;
+  padding-left: 105px;
+
+  input,
+  textarea {
+    padding: 20px;
+    background: transparent;
+    border: 2px solid grey;
+    transition: all .3s;
+  }
+
+  textarea {
+    width: 100%;
+    resize: none;
+    height: 180px;
+  }
+
+  input:focus,
+  textarea:focus {
+    border: 2px solid rgb(255, 255, 255);
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-shadow: 2px 0px 1px rgb(0, 238, 255), -2px 0px 1px rgb(255, 0, 0);
+    margin-left: 1px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  &__subject {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  &__textarea {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  &__submit {
+    cursor: pointer;
+    padding: 10px 20px !important;
+    transition: all .3s;
+    border: 2px solid grey;
+  }
+
+  &__submit:hover {
+    border: 2px solid white;
+  }
+}
+
+.contact-me {
+  background-color: #fff;
+  color: black;
+  padding: 40px;
+  font-family: "Kode Mono", monospace;
+  border: 2px solid black;
+  width: 350px;
+  height: 350px;
+  transform: translate(80px, -50px);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 3px solid rgba(0, 0, 0, 1);
+
+  &__title {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+}
