@@ -30,9 +30,9 @@ const Contact = () => {
           <p className='contact-me__info'><p>Send me any message.</p>I'll read it and get back to you.</p>
           <p className='contact-me__socials items-center justify-center'>Or write me on my social networks</p>
           <div className='contact-me__icons'>
-            <div className=' h-5'><a target='_blank' href="https://www.linkedin.com/in/artyomharutyunyan/"><img src={ln} alt="" /></a></div>
-            <div className=' h-5'><a target='_blank' href="https://t.me/AM0RALity"><img src={telegram} alt="" /></a></div>
-            <div className=' h-5'><a target='_blank' href="https://www.facebook.com/AM0RALity"><img src={facebook} alt="" /></a></div>
+            <a target='_blank' href="https://www.linkedin.com/in/artyomharutyunyan/"><img src={ln} alt="" /></a>
+            <a target='_blank' href="https://t.me/AM0RALity"><img src={telegram} alt="" /></a>
+            <a target='_blank' href="https://www.facebook.com/AM0RALity"><img src={facebook} alt="" /></a>
           </div>
         </div>
         <div className='contact-form'>
