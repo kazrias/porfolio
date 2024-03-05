@@ -3,12 +3,14 @@ import './Projects.scss'
 import { motion, useScroll, useTransform } from "framer-motion"
 import ammaTrack from '../../images/amma-track.png'
 import galactus from '../../images/galactus.jpg'
+import githab from '../../images/gitHab.png'
 const projects = [
   {
     id: 1,
     title: 'AMMA-Track',
     img: ammaTrack,
     link: "https://amma-track.vercel.app/",
+    git: "https://github.com/kazrias/AMMA-track",
     descr: "AMMA-Track is an intuitive project management platform designed to empower individuals to accomplish tasks efficiently and effectively.With its user-friendly interface and robust features, AMMA-Track enables users to organize projects, track progress seamlessly from any location. Whether you're working in a bustling office environment or from the tranquility of your home office, AMMA-Track adapts to your unique workflow, helping you stay on top of deadlines and reach new levels of productivity"
   },
   {
@@ -16,6 +18,7 @@ const projects = [
     title: 'Galactus-Store',
     img: galactus,
     link: "https://galactus-store.vercel.app/",
+    git: "https://github.com/kazrias/galactus",
     descr: "Embark on a galactic journey through our vast array of products, where every purchase feels like a cosmic conquest. From stellar fashion to interstellar gadgets, our store orbits around your every need. Explore the infinite expanse of our collection, curated with cosmic care to bring you the latest in cosmic trends and innovations. At Galactus-Store, the universe is your shopping aisle, and every purchase propels you further into the cosmic adventure of style and innovation. "
   }
 ]
@@ -38,9 +41,15 @@ const Projects = () => {
         <div className='sticky top-0 flex h-screen gap-4 items-center overflow-hidden'>
           <motion.div style={{ x }} className='flex'>
             <div className='h-screen w-screen flex justify-center items-center bg-gradient-to-b from-neutral-900 to-black'></div>
-            {projects.map(({ id, title, img, link, descr }) => (
+            {projects.map(({ id, title, img, link, descr, git }) => (
               <div className='h-screen w-screen flex justify-center flex-col items-center bg-gradient-to-b from-neutral-900 to-black ' key={id}>
-                <h2 className='project-title mb-5'>{title}</h2>
+                <div>
+                  <a target='_blank' href={git} className='flex items-center mb-5 gap-3'>
+                    <h2 className='project-title' >{title}</h2>
+                    <img src={githab} className=' h-7 ' alt="" />
+                  </a>
+
+                </div>
                 <div className='max-w-4xl flex flex-col gap-8 text-white overflow-hidden border border-white  glass-effect'>
                   <div className='relative'>
                     <img className='project-img' src={img} alt="" />
@@ -50,7 +59,9 @@ const Projects = () => {
                           <span>
                             Check it
                           </span>
-                        </button></a></p>
+                        </button>
+                      </a>
+                    </p>
 
                   </div>
                 </div>
