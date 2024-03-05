@@ -5,26 +5,27 @@ import { motion } from "framer-motion"
 const Contact = () => {
 
   return (
-    <div className='h-full relative overflow-hidden flex justify-center items-center'>
+    <div className='h-full relative overflow-hidden flex justify-center items-center ml-[96px]'>
       <motion.div
         initial={{ y: "-100vh", x: "-50vw" }}
         animate={{ y: "0%", x: "0%" }}
         transition={{ duration: 0.7 }}
-        className="h-full w-full absolute  left-[96px] bg-gradient-to-r from-black from-30% to-white clip--one">
+        className="h-full w-full absolute bg-gradient-to-r from-black from-30% to-white clip--one">
 
       </motion.div>
       <motion.div
         initial={{ y: "100vh", x: "140vw" }}
         animate={{ y: "0%", x: "0%" }}
         transition={{ duration: 0.6 }}
-        className="h-full w-full absolute  left-[96px] bg-gradient-to-l from-black from-30% to-white clip--two">
+        className="h-full w-full absolute bg-gradient-to-l from-black from-30% to-white clip--two">
 
       </motion.div>
 
-      <div className='relative z-50 flex items-center'>
+      <div className='relative z-50 flex items-center contact-wrapper'>
         <div className='contact-me'>
           <h4 className='contact-me__title'>Contact Me.</h4>
           <p className='contact-me__info'><p>Send me any message.</p>I'll read it and get back to you.</p>
+          <p className='contact-me__socials'>Or write on my social networks</p>
         </div>
         <div className='contact-form'>
           <h4 className='contact-form__title'>Send Me A Message</h4>
