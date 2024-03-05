@@ -1,6 +1,9 @@
 import './Contact.scss'
-import { useRef } from 'react'
 import { motion } from "framer-motion"
+// import git from '../../images/gitHab.png'
+import telegram from '../../images/telegram-64.png'
+import ln from '../../images/ln.png'
+import facebook from '../../images/facebook.png'
 
 const Contact = () => {
 
@@ -25,7 +28,12 @@ const Contact = () => {
         <div className='contact-me'>
           <h4 className='contact-me__title'>Contact Me.</h4>
           <p className='contact-me__info'><p>Send me any message.</p>I'll read it and get back to you.</p>
-          <p className='contact-me__socials'>Or write on my social networks</p>
+          <p className='contact-me__socials items-center justify-center'>Or write me on my social networks</p>
+          <div className='contact-me__icons'>
+            <div className=' h-5'><a target='_blank' href="https://www.linkedin.com/in/artyomharutyunyan/"><img src={ln} alt="" /></a></div>
+            <div className=' h-5'><a target='_blank' href="https://t.me/AM0RALity"><img src={telegram} alt="" /></a></div>
+            <div className=' h-5'><a target='_blank' href="https://www.facebook.com/AM0RALity"><img src={facebook} alt="" /></a></div>
+          </div>
         </div>
         <div className='contact-form'>
           <h4 className='contact-form__title'>Send Me A Message</h4>

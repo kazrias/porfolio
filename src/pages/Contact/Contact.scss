@@ -108,7 +108,39 @@
     color: #fff;
     margin-bottom: 40px;
   }
-  
+
+  &__socials {
+    margin-bottom: 12px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 15px;
+
+    div {
+      transition: all .3s;
+      height: 25px;
+      padding: 2px;
+      cursor: pointer;
+    }
+
+    div:hover {
+      transform: translateY(-5px);
+    }
+
+    div:hover img {
+      filter: drop-shadow(2px 8px 0px black);
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      height: 100%;
+      filter: drop-shadow(2px 3px 0px black);
+      transition: all .3s;
+    }
+
+  }
 }
 
 
