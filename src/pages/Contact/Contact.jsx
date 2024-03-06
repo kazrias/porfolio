@@ -10,16 +10,16 @@ const Contact = () => {
   return (
     <div className='h-full relative overflow-hidden flex justify-center items-center ml-[99px]'>
       <motion.div
-        initial={{ y: "-100vh", x: "-50vw" }}
-        animate={{ y: "0%", x: "0%" }}
-        transition={{ duration: 0.7 }}
+        initial={{ y: "-100vh", x: "-50vw", opacity: 0 }}
+        animate={{ y: "0%", x: "0%", opacity: 1 }}
+        transition={{ duration: 0.7, opacity: { duration: 2 } }}
         className="h-full w-full absolute bg-gradient-to-r from-black from-30% to-white clip--one">
 
       </motion.div>
       <motion.div
-        initial={{ y: "100vh", x: "140vw" }}
-        animate={{ y: "0%", x: "0%" }}
-        transition={{ duration: 0.6 }}
+        initial={{ y: "100vh", x: "140vw", opacity: 0 }}
+        animate={{ y: "0%", x: "0%", opacity: 1 }}
+        transition={{ duration: 0.6, opacity: { duration: 2 } }}
         className="h-full w-full absolute bg-gradient-to-l from-black from-30% to-white clip--two">
 
       </motion.div>
