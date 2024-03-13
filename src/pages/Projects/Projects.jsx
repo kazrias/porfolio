@@ -53,8 +53,8 @@ const Projects = () => {
                 <div className='max-w-4xl flex flex-col gap-8 text-white overflow-hidden border border-white  glass-effect'>
                   <div className='relative'>
                     <img className='project-img' src={img} alt="" />
-                    <p className=' p-3'>{descr}
-                      <a target='_blank' className=' block' href={link}>
+                    <p className='flex flex-col p-3'>{descr}
+                      <a target='_blank' className='ml-auto block' href={link}>
                         <button className="ui-btn mt-2">
                           <span>
                             Check it
